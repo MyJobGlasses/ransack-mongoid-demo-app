@@ -16,3 +16,4 @@ bundle exec rails s
 
 ## Test the features (broken at the time of writing)
 Go to localhost:3000/admin and log in with the seeded admin user (email: admin@local.xyz, password: password) and click on a random tab (AdminUser or Posts)
+For quick access to one of the bugs encountered, go to http://localhost:3000/admin/posts
