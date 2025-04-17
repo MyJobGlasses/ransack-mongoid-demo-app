@@ -1,24 +1,18 @@
-# README
+# Ransack mongoid demo app
+This demo application uses [MyJobGlasses](https://www.myjobglasses.com/) fork of [ransack-mongoid](https://github.com/MyJobGlasses/ransack-mongoid) and [activeadmin-mongoid](https://github.com/MyJobGlasses/activeadmin-mongoid).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Versions
+Ruby : 3.2.2
+MongoDB: Latest as compatible with Mongoid 8.0
 
-Things you may want to cover:
+## Installation
+Boot a MongoDB instance on the 27017 port and set it for use without user/password auth, then run these commands
+```sh
+docker compose up -d # will boot mongodb instance
+bundle install
+bundle exec rails db:seed
+bundle exec rails s
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Test the features (broken at the time of writing)
+Go to localhost:3000/admin and log in with the seeded admin user (email: admin@local.xyz, password: password) and click on a random tab (AdminUser or Posts)
